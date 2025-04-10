@@ -1,0 +1,13 @@
+services:
+    web:
+        tty: true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        # commands: python3 manage.py runserver 0.0.0.0:8000
+        image: custom-django-image
+        container_name: web-container-django
+        ports:
+            - "8080:8000"
+        volumes:
+            - ./:/app
