@@ -17,7 +17,7 @@ Les fichiers de configuration (_compose.yaml et Dockerfile_) ainsi que les scrip
 - Vérifiez que Docker est bien en cours d'exécution : ```docker ps```
 - Exécutez le premier script : ```./first_script.sh```
 - Exécutez le deuxième script : ```./second_script.sh```
-- **Commencez à développer sur VSCode**
+- Vous pouvez **commencer à développer sur VSCode**
 
 ## Vérification du fonctionnement du serveur Web
 - ```localhost:8080```
@@ -26,6 +26,13 @@ Les fichiers de configuration (_compose.yaml et Dockerfile_) ainsi que les scrip
 - Ouvrez une console ou terminal sur VSCode
 - Positionnez vous à la racine de votre projet
 - Exécutez la commande : ```docker compose down```
+
+## S'approprier les dossiers créés dans le container
+- Passez en super user et exécutez le **troisième script** : ```sudo ./third_script.sh``` **ATTENTION !** il faut adapter le nom et le groupe avec votre utilisateur à la **ligne 4** de ce script
+
+## Connexion au conteneur en ssh (_infos dans le Dockerfile_)
+- Login : ```ssh root@localhost -p 20022```
+- Mot de passe : ```root123```
 
 ## Structure du projet avant exécution des scripts :
 
@@ -59,4 +66,4 @@ docker_python<br>
 ├── README.md<br>
 └── second_script.sh<br>
 
-J'espère que ce petit projet pourra vous rendre service
+J'espère que ce petit projet pourra vous être utile (**bon codage !**)
